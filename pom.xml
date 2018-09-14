@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.answern.common</groupId>
+  <artifactId>cmq-project</artifactId>
+  <packaging>pom</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <modules>
+    <module>cmq</module>
+    <module>cmq-spring-boot-starter</module>
+    <module>cmq-spring</module>
+  </modules>
+
+  <name>cmq-project</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <spring.version>5.0.8.RELEASE</spring.version>
+    <spring-boot.version>2.0.4.RELEASE</spring-boot.version>
+    <revision>0.0.1-SNAPSHOT</revision>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>${spring.version}</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${spring-boot.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+  </dependencies>
+  <distributionManagement>
+    <repository>
+      <id>snapshots</id>
+      <url>http://10.0.0.174:8081/nexus/content/repositories/snapshots/</url>
+    </repository>
+
+  </distributionManagement>
+  <build>
+  </build>
+</project>
